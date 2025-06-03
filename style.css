@@ -241,7 +241,7 @@ body {
 
 .log-in-head:hover {
     transform: scale(1.1);
-    background-color: #b3b3b3;
+    background-color: rgba(240, 240, 240, 1);
     color: black;
     object-fit: cover;
     overflow: hidden;
@@ -639,7 +639,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+
 }
+
 
 .card:hover {
     background-color: rgba(34, 33, 33, 0.2);
@@ -709,4 +714,12 @@ body {
 .artist-card-content:hover .play-button-artist {
     opacity: 1;
     transform: scale(1);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: rgba(240, 240, 240, 1);
+    color: black;
+    object-fit: cover;
+    overflow: hidden;
 }
