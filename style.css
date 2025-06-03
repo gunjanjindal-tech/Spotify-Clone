@@ -432,12 +432,23 @@ body {
 
 .card {
     width: 195px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
 }
 
 .card img {
     border-radius: 8px;
     width: 171.5px;
     height: 171.5px;
+}
+
+.card p {
+    padding: 8px;
 }
 
 .trending-songs-right p {
@@ -457,6 +468,7 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     width: 195px;
+    padding-left: 8px;
 }
 
 .popular-artists {
@@ -478,7 +490,17 @@ body {
 .artist-cards {
     width: 195px;
     display: flex;
+}
 
+.artist-card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px;
+    position: relative;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .artist-card-content img {
@@ -492,6 +514,7 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
     font-weight: 200;
+    padding: 8px;
 }
 
 .artist-card-content span {
@@ -503,6 +526,9 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     width: 195px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* About Starts */
@@ -613,4 +639,74 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.card:hover {
+    background-color: rgba(34, 33, 33, 0.2);
+
+}
+
+.artist-card-content:hover {
+    background-color: rgba(34, 33, 33, 0.2);
+}
+
+.play-button {
+    position: absolute;
+    bottom: 105px;
+    right: 20px;
+    background-color: #1fdf64;
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover .play-button {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.play-button-artist {
+    position: absolute;
+    bottom: 70px;
+    right: 30px;
+    background-color: #1fdf64;
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.artist-card-content:hover .play-button-artist {
+    opacity: 1;
+    transform: scale(1);
 }
